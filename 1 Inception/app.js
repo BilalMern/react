@@ -23,13 +23,6 @@
 // let root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(parent);
 
-
-
-
-
-
-
-
 //! if we have more then one child to main div:
 
 let parent = React.createElement("div", { id: "parent" }, [
