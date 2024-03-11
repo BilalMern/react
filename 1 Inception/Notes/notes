@@ -1,0 +1,13 @@
+Lecture 01 notes!
+
+React.createElement is a object.
+
+render job is to take that js object, create that or convert it into the h1 tag which the browser understands and put it up inside the root element(id) or DOM.
+
+Never ever think that when we are doing React.createElement it is creating some HTML..No it is creating an object. While it is rendering on the DOM it converts itself into the HTML and put it up into the DOM.
+
+if we want to add more siblings to any tag then we have to rap them up in a array:
+
+React can work independently in a small portion of our app that is why it is called a library. So if we want to add react in header them we just have to makae header as root.
+
+In the end react is just a javascript, it is just giving us some helper methods that we need to use to develop faster applications.
