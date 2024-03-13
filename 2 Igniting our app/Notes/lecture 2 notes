@@ -42,3 +42,9 @@ What Parcel offers to us:
  -Error handling.
  -Https.
  -Tree shaking-delete unused code.
+ -diffrent prduct and dev bundlers.
+
+Generating production build using parcel:
+we have to write command:
+npx parcel build index.html
+after entering this will throw an error because while installing parcel in our project it will automatically give us main as app.js and we are building parcel in index.html thats why error occurs to solve it we have to delete the main app.js path in package.json file.
