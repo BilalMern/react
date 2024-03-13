@@ -12,28 +12,28 @@
 //! Adding sibling to any tag:
 // ! if we want to add more siblings to any tag then we have to rap them up in a array:
 
-// let parent = React.createElement(
-//   "div",
-//   { id: "parent" },
-//   React.createElement("div", { id: "child" }, [
-//     React.createElement("h1", {}, "this is h1 tag"),
-//     React.createElement("h2", {}, "this is h2 tag"),
-//   ])
-// );
-// let root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(parent);
+let parent = React.createElement(
+  "div",
+  { id: "parent" },
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", {}, "this is h1 tag"),
+    React.createElement("h2", {}, "this is h2 tag"),
+  ])
+);
+let root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(parent);
 
 //! if we have more then one child to main div:
 
-let parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "this is an h1 tag!"),
-    React.createElement("h2", {}, "this is an h2 tag!"),
-  ]),
-  React.createElement("div", { id: "child2" }, "this is text from child2:"),
-]);
-let root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent); 
+// let parent = React.createElement("div", { id: "parent" }, [
+//   React.createElement("div", { id: "child1" }, [
+//     React.createElement("h1", {}, "this is an h1 tag!"),
+//     React.createElement("h2", {}, "this is an h2 tag!"),
+//   ]),
+//   React.createElement("div", { id: "child2" }, "this is text from child2:"),
+// ]);
+// let root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(parent); 
 
 //! this code is look like a mess and its very difficult to read the code to tackle this issue we have something known as JSX:
 //! so above is the core of reactJS.
