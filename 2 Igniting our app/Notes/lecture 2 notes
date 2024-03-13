@@ -20,3 +20,25 @@ so we understood that package.json is a configuration for our npm and node modul
 Transitive dependencies: when we install parcel then why do we got so many other randoms things also appears in node modules it came over here because our project needs parcel now parcel as a project has it own dependencies and those dependencies can have it there own dependecies and those dependencies can have there own dependencies this is known as transitive dependencies.
 
 It is important to push package.json and package-lock.json on github but not have to put node_modules on github because if i have my package.json and package-lock.json we can regenerate our node_modules.
+
+after making a build if we change something in our code parcel will automatically update on the server and refresh it, this is done by parcel here parcel is doing HMR hot module replacement. here parcel using the File Reading Algorithm which is written in c++, it keeps an eye on all our files as soon as we are developing something we change our code parcel is keeping a track of every change now.
+
+Parcel also do cashing which ensures faster builds.
+
+What Parcel offers to us:
+ -Dev build.
+ -Local server.
+ -HMR- hot module replacement.
+ -File watching algorithm- written in c++.
+ -Cashing-faster builds.
+ -Image optimization.
+ -Manification.
+ -Bundling.
+ -Compress the code.
+ -Consistent hashing.
+ -Code Splitting.
+ -Differential bundling-suppor older browsers.
+ -Diagnostic- beutiful errors.
+ -Error handling.
+ -Https.
+ -Tree shaking-delete unused code.
