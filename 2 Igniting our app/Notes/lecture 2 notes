@@ -48,3 +48,10 @@ Generating production build using parcel:
 we have to write command:
 npx parcel build index.html
 after entering this will throw an error because while installing parcel in our project it will automatically give us main as app.js and we are building parcel in index.html thats why error occurs to solve it we have to delete the main app.js path in package.json file.
+
+When we do npx parcel build index.html it will bundle it will minify and do all the crazy stuff and put all the files inside new folder which is dist. before starting production build this dist file was containing developement files after generating production build so this dist contains build files and now the hosted thing is coming from this dist. 
+
+What is dist? 
+ when we execute parcel when we write npx parcel index.html it generates a development build of our project and hosted on localhost so when it generates a development build it puts it up into dist folder after it the output is coming from dist file not from our files. and when we built a production build it also build inside dist. and it can be regenerated again and again.Now this production build is highly optimized build which can push onto production and serve this app to the user, it will be fast it will be performent, it will be optimized.
+
+
