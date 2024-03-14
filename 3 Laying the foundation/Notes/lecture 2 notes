@@ -2,4 +2,11 @@ When we have to execute parcel in our project then we have to write commands
      npx parcel index.html---> for development
      npx parcel build index.html---> for production
 
-To make our life easier what we do we make scripts in package.json that will build our project instead of writing these commands again and again 
+To make our life easier what we do we make scripts in package.json that will build our project instead of writing these commands again and again. Making npm scripts is industry standard convention. These scripts helps us when we go to new company or working on new project and we dont know how to build that project we have to go to package.json and find package.json scripts and we will definitely finds some commands over there. we can run our scripts by: 
+      npm run script name..
+
+i.e to start our project we have to write command now:
+  npm run start. //behind the scenes it executes a package parcel with index.html because we have configure this inside our package.json.
+
+For production build we can write command without writing run but in production build we have to write run in it its necessary.
+
