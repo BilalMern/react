@@ -18,3 +18,10 @@ JSX --> React.createElement --> js object --> Html Element(render).
 First jsx code is converted into ReactElement then it is readable by react.
 
 If we have to give attribute to jsx then we have to use camelCase. And if the jsx code is more then one line then we have to wrap it in ().
+
+COMPONENTS:
+           There are two types of components:
+           1: Class base components-Old way of writing code.
+           2: Functional components-New way of writing code.
+
+           
