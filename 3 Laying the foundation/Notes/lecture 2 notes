@@ -10,3 +10,9 @@ i.e to start our project we have to write command now:
 
 For production build we can write command without writing run but in production build we have to write run in it its necessary.
 
+Creating an element in react in very difficult for developers so the facebook developers created something which is JSX which is javaScript syntax which makes easier to create react elements.
+
+JSX is not html in javascript, it is a html-like syntax.
+JSX behind the scenes work as React.createElement:
+JSX --> React.createElement --> js object --> Html Element(render).
+First jsx code is converted into ReactElement then it is readable by react.
