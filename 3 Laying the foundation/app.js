@@ -8,3 +8,4 @@ let jsxHeading=<h1>This is h1 tag in jsx!</h1> //! this will also give object an
 
 let root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(jsxHeading)
+
