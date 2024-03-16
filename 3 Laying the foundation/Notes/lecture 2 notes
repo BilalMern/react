@@ -25,3 +25,4 @@ COMPONENTS:
            2: Functional components-New way of writing code.
 
            
+If a data is coming from an API and we execute that data in jsx using {} now what if an attacker sends some malicious data in this API and we are injecting the data from that API it our code which will executed, This type of attack is known as CROSS SITE SCRIPTING but JSX is so amazing that it takes care of this kind of injection attacks so the code which is executing in those {} jsx will not run it blindly it will sanitize our data before executing it So JSX prevents CROSS SITE SCRIPTING attacks.  

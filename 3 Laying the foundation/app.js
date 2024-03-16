@@ -43,7 +43,7 @@ import ReactDOM  from "react-dom/client";
 // let FuncComp=()=>(
 //     <div>
 //     <h1>Hello there!</h1>
-//     < SecondFunc/>
+//     < SecondFunc/> or {SecondFunc()} or <SecondFun></SecondFunc>
 //     </div>
 // )
 // let SecondFunc=()=>(
