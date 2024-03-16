@@ -54,3 +54,15 @@ import ReactDOM  from "react-dom/client";
 // )
 // let root = ReactDOM.createRoot(document.getElementById("root"))
 // root.render(< FuncComp />)
+
+//! Calling an react element in component.
+let reactElement = <h3>Hello this is React Element!</h3>
+
+let Compo = ()=>(
+    <div>
+    <h1>This is functional component</h1>
+    {reactElement}
+    </div>
+)
+let root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<Compo/>)
