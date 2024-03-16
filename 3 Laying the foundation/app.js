@@ -25,17 +25,32 @@ import ReactDOM  from "react-dom/client";
 
 //! calling a functional component inside functional component is known as component composition.
 //* Component Composition:
-let FunctionComp =()=>(
-     <h3>rendering a component inside component</h3>
-)
+// let FunctionComp =()=>(
+//      <h3>rendering a component inside component</h3>
+// )
 
-let MainFunc =()=>(
-    <div>
-   <h1>This is main function</h1>
-    <FunctionComp/>
-    </div>
-)
-let root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<MainFunc/>)
+// let MainFunc =()=>(
+//     <div>
+//    <h1>This is main function</h1>
+//     <FunctionComp/>
+//     </div>
+// )
+// let root = ReactDOM.createRoot(document.getElementById("root"))
+// root.render(<MainFunc/>)
 
-//! If we put {} anywhere in our JSX then we can run any kind of js expression in these parenthesis
+//! If we put {} anywhere in our JSX then we can run any kind of js expression in these parenthesis:
+// const num = 123;
+// let FuncComp=()=>(
+//     <div>
+//     <h1>Hello there!</h1>
+//     < SecondFunc/>
+//     </div>
+// )
+// let SecondFunc=()=>(
+//     <div>
+//     <h3>Second Func</h3>
+//    <h2>{num}</h2> 
+//     </div>
+// )
+// let root = ReactDOM.createRoot(document.getElementById("root"))
+// root.render(< FuncComp />)
