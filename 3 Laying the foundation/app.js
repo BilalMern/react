@@ -1,9 +1,8 @@
 import React from "react";
-import ReactDOM  from "react-dom/client";
-
+import ReactDOM from "react-dom/client";
 
 //! Jsx:
-//* Creating h1 tag using jsx. 
+//* Creating h1 tag using jsx.
 //? jsx is not html in js jsx is a html like syntax.
 
 // let jsxHeading=<h1>This is h1 tag in jsx!</h1> //* this will also give object and this code is not pure js code and not browser readable parcel is doing the job to make it browser readable thats why the code is working perfectly fine. here parcel tranpiled the code before it reaches to js engine, transpiled means conversion. parcel is not tranpiled the code by itself it gives the responsibility of transpilation to a package which is known as babel. jsx is behind the scenes work as React.createElement
@@ -49,20 +48,28 @@ import ReactDOM  from "react-dom/client";
 // let SecondFunc=()=>(
 //     <div>
 //     <h3>Second Func</h3>
-//    <h2>{num}</h2> 
+//    <h2>{num}</h2>
 //     </div>
 // )
 // let root = ReactDOM.createRoot(document.getElementById("root"))
 // root.render(< FuncComp />)
 
 //! Calling an react element in component.
-let reactElement = <h3>Hello this is React Element!</h3>
+// let reactElement = <h3>Hello this is React Element!</h3>
 
-let Compo = ()=>(
-    <div>
-    <h1>This is functional component</h1>
-    {reactElement}
-    </div>
-)
-let root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<Compo/>)
+// let Compo = ()=>(
+//     <div>
+//     <h1>This is functional component</h1>
+//     {reactElement}
+//     </div>
+// )
+// let root = ReactDOM.createRoot(document.getElementById("root"))
+// root.render(<Compo/>)
+
+//! Different ways of calling component:
+
+let Comp = () => <h1>Hello there!</h1>;
+let root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Comp />);
+root.render(<Comp></Comp>);
+root.render(Comp());
