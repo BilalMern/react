@@ -24,7 +24,7 @@ import ReactDOM  from "react-dom/client";
 // root.render(<FunctionHeading />) //!This is the syntax to render a functional component.
 
 //! calling a functional component inside functional component is known as component composition.
-
+//* Component Composition:
 let FunctionComp =()=>(
      <h3>rendering a component inside component</h3>
 )
@@ -37,3 +37,5 @@ let MainFunc =()=>(
 )
 let root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(<MainFunc/>)
+
+//! If we put {} anywhere in our JSX then we can run any kind of js expression in these parenthesis
