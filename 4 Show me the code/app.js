@@ -1,4 +1,5 @@
 /**
+*App-Layout
  *Header
  *  -Logo
  *  -Nav Items
@@ -20,7 +21,14 @@ let Header = ()=>{
     return (
         <div className="header">
             <div className="logo"><img src = "https://www.creativefabrica.com/wp-content/uploads/2021/03/16/restaurant-logo-design-template-Graphics-9643920-1.jpg"/></div>
-            <div></div>
+            <div className="nav-items">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
         </div>
     )
 }
@@ -31,7 +39,9 @@ let AppLayout = () => {
    <Header/>
    
 
-  </div>;
+   </div>;
 };
 let root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(<AppLayout/>)
+
+
