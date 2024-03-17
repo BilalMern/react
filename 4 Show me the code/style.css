@@ -70,10 +70,13 @@ border-radius: 5px 5px 0 0;
 }
 .rating{
     background-color: green;
-    width: 28px;
+    width: 38px;
     color: white;
     padding: 3px 4px;
     text-align: center;
+    font-size: 9px;
+    display: flex;
+    gap: 5px;
 }
 .delivery{
     color: rgb(156, 151, 151);
@@ -86,5 +89,5 @@ border-radius: 5px 5px 0 0;
 .details{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }

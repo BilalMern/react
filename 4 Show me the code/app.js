@@ -54,7 +54,7 @@ let RestaurantCard = () => {
       </h3>
       <h6 className="cousine">Zinger, pakistan, Asian</h6>
       <div className="details">
-        <h6 className="rating">4.4</h6>
+        <h6 className="rating"><i class="bi bi-star-fill"></i> 4.4</h6>
         <h6 className="delivery">38 MINS</h6>
         <h6 className="price">PKR 1000 FOR TWO</h6>
       </div>
