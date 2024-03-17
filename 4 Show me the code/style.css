@@ -41,11 +41,50 @@ body{
 }
 .res-card{
     width: 200px;
-    height: 300px;
-    border: 1px solid #212529;
-    border-radius: 5px;
+    padding: 3px;
+    /* border: 1px solid #212529; */
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #e9ecef;
 }
+.res-card:hover{
+    border: 1px solid #212529;
+    cursor: pointer;
+}
+
 .search{
     margin-top: 50px;
     margin-bottom: 20px;
+}
+.card-img{
+width: 100%;
+height: 170px;
+border-radius: 5px 5px 0 0;
+
+}
+.cousine{
+    color: rgb(156, 151, 151);
+    margin-top: -8px;
+}
+.rating{
+    background-color: green;
+    width: 28px;
+    color: white;
+    padding: 3px 4px;
+    text-align: center;
+}
+.delivery{
+    color: rgb(156, 151, 151);
+    font-size: 9px;
+}
+.price{
+    color: rgb(156, 151, 151);
+    font-size: 9px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }

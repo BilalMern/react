@@ -42,27 +42,37 @@ let Header = () => {
   );
 };
 
-let RestaurantCard=()=>{
-    return(
-        <div className="res-card">
-          <h3><span className="lorems">Lorem</span> Ipsum</h3>
-        </div>
-    )
-}
+let RestaurantCard = () => {
+  return (
+    <div className="res-card">
+      <img
+        className="card-img"
+        src="https://images.pexels.com/photos/16637682/pexels-photo-16637682/free-photo-of-burger-and-fries-on-table-in-restaurant.jpeg?auto=compress&cs=tinysrgb&w=800"
+      />
+      <h3>
+        <span className="lorems">Lorem</span> Ipsum
+      </h3>
+      <h6 className="cousine">Zinger, pakistan, Asian</h6>
+      <div className="details">
+        <h6 className="rating">4.4</h6>
+        <h6 className="delivery">38 MINS</h6>
+        <h6 className="price">PKR 1000 FOR TWO</h6>
+      </div>
+    </div>
+  );
+};
 
-let Body = ()=>{
-    return (
-        <div className="body">
-
-          <div className="search">Search</div>
-          {/* The below div contain so many restaurant carts. */}
-          <div className="res-container">
-            <RestaurantCard/>
-          </div> 
-
-        </div>
-    )
-}
+let Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      {/* The below div contain so many restaurant carts. */}
+      <div className="res-container">
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
 
 let AppLayout = () => {
   return (
@@ -81,6 +91,7 @@ root.render(<AppLayout />);
 // }
 // const Card =()=>{
 //     return (
-//         <div style={styleCard}>hello there!</div>
+//         <div style={styleCard}>hello there!</div> OR
+//         <div style ={{color:red}}>
 //     )
 // } //!this will make text color red.
