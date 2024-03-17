@@ -7,6 +7,7 @@
  *  -Search
  *  -RestaurantContainer
  *    -RestaurantCard
+ *      -Name of Restaurant
  *      -Image
  *      -Name of the Restaurant, Star Rating, Cuisines, Delivery Time
  *Footer
@@ -43,17 +44,21 @@ let Header = () => {
 
 let RestaurantCard=()=>{
     return(
-        <div className="res-card"></div>
+        <div className="res-card">
+          <h3><span className="lorems">Lorem</span> Ipsum</h3>
+        </div>
     )
 }
 
-let body = ()=>{
+let Body = ()=>{
     return (
         <div className="body">
 
           <div className="search">Search</div>
           {/* The below div contain so many restaurant carts. */}
-          <div className="res-container"></div> 
+          <div className="res-container">
+            <RestaurantCard/>
+          </div> 
 
         </div>
     )
@@ -63,9 +68,19 @@ let AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <body />
+      <Body />
     </div>
   );
 };
 let root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);
+
+//! if we have to write css in jsx then we have to write it in object, i.e:
+// let styleCard={
+//    color: red,
+// }
+// const Card =()=>{
+//     return (
+//         <div style={styleCard}>hello there!</div>
+//     )
+// } //!this will make text color red.

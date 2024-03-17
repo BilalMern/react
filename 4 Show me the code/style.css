@@ -36,3 +36,16 @@ body{
 .red{
     color: #212529;
 }
+.res-card .lorems{
+    color: red;
+}
+.res-card{
+    width: 200px;
+    height: 300px;
+    border: 1px solid #212529;
+    border-radius: 5px;
+}
+.search{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
