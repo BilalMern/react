@@ -20,12 +20,12 @@ import ReactDOM from "react-dom/client";
 let Header = ()=>{
     return (
         <div className="header">
-            <div className="logo"><img src = "https://www.creativefabrica.com/wp-content/uploads/2021/03/16/restaurant-logo-design-template-Graphics-9643920-1.jpg"/></div>
+            <div className="logo"><img src = "https://png.pngtree.com/png-clipart/20200720/original/pngtree-abstract-logo-for-cafe-or-restaurant-graphic-food-icon-symbol-for-png-image_4316818.jpg"/></div>
             <div className="nav-items">
                 <ul>
                     <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
+                    <li>About <span className="red">Us</span></li>
+                    <li>Contact<span className="red"> Us</span></li>
                     <li>Cart</li>
                 </ul>
             </div>
