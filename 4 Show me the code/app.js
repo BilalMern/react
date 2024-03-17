@@ -7,6 +7,8 @@
  *  -Search
  *  -RestaurantContainer
  *    -RestaurantCard
+ *      -Image
+ *      -Name of the Restaurant, Star Rating, Cuisines, Delivery Time
  *Footer
  *  -Copyright
  *  -Links
@@ -39,11 +41,19 @@ let Header = () => {
   );
 };
 
+let RestaurantCard=()=>{
+    return(
+        <div className="res-card"></div>
+    )
+}
+
 let body = ()=>{
     return (
         <div className="body">
 
           <div className="search">Search</div>
+          {/* The below div contain so many restaurant carts. */}
+          <div className="res-container"></div> 
 
         </div>
     )
