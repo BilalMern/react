@@ -1,0 +1,17 @@
+<!-- if we have to write css in jsx then we have to write it in object, i.e:
+ let styleCard={
+    color: red,
+ } -->
+ <!-- const Card =()=>{
+     return (
+         <div style={styleCard}>hello there!</div> OR
+        <div style ={{color:red}}>
+    ) -->
+ <!-- } this will make text color red. -->
+
+
+
+ <!-- Making our cards dynamic by using props:
+ Props are just normal function arguments: passing a prop to a component means passing a argument to a function.
+To pass some dynamic data to component we can pass it as a props.  -->
+

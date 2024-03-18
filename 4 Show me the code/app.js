@@ -68,7 +68,18 @@ let Body = () => {
       <div className="search">Search</div>
       {/* The below div contain so many restaurant carts. */}
       <div className="res-container">
+        
         <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+
       </div>
     </div>
   );
@@ -85,13 +96,3 @@ let AppLayout = () => {
 let root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);
 
-//! if we have to write css in jsx then we have to write it in object, i.e:
-// let styleCard={
-//    color: red,
-// }
-// const Card =()=>{
-//     return (
-//         <div style={styleCard}>hello there!</div> OR
-//         <div style ={{color:red}}>
-//     )
-// } //!this will make text color red.
