@@ -12,6 +12,7 @@
 
 
  <!-- Making our cards dynamic by using props:
- Props are just normal function arguments: passing a prop to a component means passing a argument to a function.
-To pass some dynamic data to component we can pass it as a props.  -->
+ // Props are just normal function arguments: passing a prop to a component means passing a argument to a function.
+ // React will wrap all the props as an object and passing over props parameter.
+// To pass some dynamic data to component we can pass it as a props.  -->
 
