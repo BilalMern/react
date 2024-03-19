@@ -134,7 +134,7 @@
    );
  };
  
- let RestaurantCard = (props) => { //! Some developers instead of writing props here they destructure on the fly means: let RestaurantCard = ({img,cuisine,rating,delivery,price}) => { --> now below we dont need to write {props.img}, {props.cuisine},{props.price} etc we just need to write {img},{cuisine},{price}
+ let RestaurantCard = (props) => {     //! Some developers instead of writing props here they destructure on the fly means: let RestaurantCard = ({img,cuisine,rating,delivery,price}) => { --> now below we dont need to write {props.img}, {props.cuisine},{props.price} etc we just need to write {img},{cuisine},{price}. This destructuring on the fly is same as let RestaurantCard = (props) => { const {img,price,delivery,cuisine}=props___}
    return (
      <div className="res-card">
        <img className="card-img" src={props.img} />
