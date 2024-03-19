@@ -193,7 +193,7 @@ body {
   .details {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
   }
   .res-container{
       display: grid;
