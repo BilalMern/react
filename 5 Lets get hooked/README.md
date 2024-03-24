@@ -22,4 +22,5 @@ Previously we wrote everything in a single app.js file which is not good practic
 
 All the main code in the react project we generally keep it in a src folder.
 
+In component files we should not add any hardcoded data and hardcoded string like image src.
 
