@@ -1,0 +1,1 @@
+Every thing that react can do we can do that using normal html css javascript. 
