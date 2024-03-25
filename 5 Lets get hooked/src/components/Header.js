@@ -1,8 +1,9 @@
+import LOGO_URL from "../utils/constant"
 let Header = () => {
     return (
       <div className="header">
         <div className="logo">
-          <img src="https://png.pngtree.com/png-clipart/20200720/original/pngtree-abstract-logo-for-cafe-or-restaurant-graphic-food-icon-symbol-for-png-image_4316818.jpg" />
+          <img src= {LOGO_URL} />
         </div>
         <div className="nav-items">
           <ul>
