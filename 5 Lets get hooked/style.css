@@ -100,3 +100,18 @@
       justify-content: center;
       gap: 30px;
   }
+
+  .filter-btn{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    padding: 3px;
+    border-radius: 4px;
+    border: 2px solid red;
+    cursor: pointer;
+  }
+  .filter{
+    display: flex;
+    justify-content: center;  
+  
+  }

@@ -6,7 +6,9 @@ import resCardData from "../utils/mockData";
 let Body = () => {
     return (
       <div className="body">
-        <div className="search">Search</div>
+        <div className="filter">
+          <button className="filter-btn" onClick={()=>{console.log("button clicked!")}}>Top Rated Restaurants</button>
+        </div>
         {/* The below div contain so many restaurant carts. */}
         <div className="res-container">
           {resCardData.map((x) => {
