@@ -25,3 +25,14 @@ All the main code in the react project we generally keep it in a src folder.
 In component files we should not add any hardcoded data and hardcoded string like image src.
 
 There are two types of import and export, default and named. In one file we can only use one default export. If we have to export multiple things from one file then we use named export. For using named export we just have to write export in front of our variable name. and while importing it we write variable name inside {}.
+
+for example:
+ -Default Import Export:
+   export default component(or variable name);
+   import component from "path";
+  
+ -Named Import Export:
+   export const component;
+   import {component} from "path";
+
+In path ./ means accessing file from same folder and when import something from same file ./ is necessary to write because if we dont write it then it is considered as a node module part. So by writing ./ we insure that it is local file not in node-modules.
