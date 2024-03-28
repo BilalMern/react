@@ -9,7 +9,8 @@ let Body = () => {
         <div className="filter">
           <button className="filter-btn" onClick={()=>{
             //! Filter logic is here!
-            // resCardData=resCardData.filter((res)=>res.rating> 4)
+            resCardData=resCardData.filter((res)=>res.rating> 4.6)
+            console.log(resCardData)
           
           }}>Top Rated Restaurants</button>
         </div>

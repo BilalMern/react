@@ -38,3 +38,7 @@ for example:
 In path ./ means accessing file from same folder and when import something from same file ./ is necessary to write because if we dont write it then it is considered as a node module part. So by writing ./ we insure that it is local file not in node-modules.
 
 Suppose if we have to keep our data and the UI layer consistent or parelled to each other that is where react comes into the picture.
+
+
+REACT HOOKS:
+To create react super power variables we use hooks. the hooks in the end of the day is simple js functions which is given to us by react its a prebuilt, the only thing is that function comes with super powers
