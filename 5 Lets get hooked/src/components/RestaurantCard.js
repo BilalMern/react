@@ -11,7 +11,7 @@ let RestaurantCard = (props) => {
         <h6 className="cousine">{resData.cuisine}</h6>
         <div className="details">
           <h6 className="rating">
-            <i class="bi bi-star-fill"></i> {resData.rating}
+            <i className="bi bi-star-fill"></i> {resData.rating}
           </h6>
           <h6 className="delivery">{resData.delivery}</h6>
           <h6 className="price">{resData.price}</h6>

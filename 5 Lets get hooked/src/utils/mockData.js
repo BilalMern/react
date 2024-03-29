@@ -160,5 +160,4 @@ let resCardData = [
       price: "PKR 3000",
     },
   ];
-
-  export default resCardData
+export default resCardData

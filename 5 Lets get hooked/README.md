@@ -39,6 +39,9 @@ In path ./ means accessing file from same folder and when import something from 
 
 Suppose if we have to keep our data and the UI layer consistent or parelled to each other that is where react comes into the picture.
 
+In react Event listener onClick takes a call back function for example:
+button onClick = {()=>{...}}
+
 
 REACT HOOKS:
 To create react super power variables we use hooks. the hooks in the end of the day is simple js functions which is given to us by react its a prebuilt, the only thing is that function comes with super powers
