@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard"
+import RestaurantCard from "./RestaurantCard";
 import resCardData from "../utils/mockData";
 
 

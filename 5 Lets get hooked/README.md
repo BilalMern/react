@@ -43,5 +43,28 @@ In react Event listener onClick takes a call back function for example:
 button onClick = {()=>{...}}
 
 
-REACT HOOKS:
-To create react super power variables we use hooks. the hooks in the end of the day is simple js functions which is given to us by react its a prebuilt, the only thing is that function comes with super powers
+REACT HOOKS: also known as utility functions.
+To create react super power variables we use hooks. the hooks in the end of the day is simple js functions which is given to us by react its a prebuilt, the only thing is that function comes with super powers.
+                 There are two very important hooks:
+-useState()  
+          Used to give us superpowerfull state   Variable in react. To use it we have first to import it from react and we always import it as a named import. As we know react hooks are js functions so we have to call it as same as js function when we call it it will give us a state variable and we recieve that variable in array for example:
+let [listOfCards] =useState(); // This is how we create a state variable 
+
+Difference between normal and state variable:
+  Normal variable:
+    let listOfCard;
+  State variable:
+    const [listOfCard]=useState() //To give default value to variable we have to write it in function arguement i.e:  cont [listOfCard]=useState([{},{},{},{}]);
+  
+  and if we have to update the value of state variable then we have to give second parameter to it which is itself a function and by calling it we can give the value to update.
+
+  const [listOfCard,setlistOfCard]=useState([{},{}])
+            |              |                   |
+      State Variable  Function to call      default 
+                      to whatever
+                      we need to update
+                      in state variable    
+
+Whenever the State Variable updates React reRender the component.
+
+-useEffect()
