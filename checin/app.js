@@ -1,13 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { useState } from "react";
 
 let AppLayout = () => {
+  let [counter,setCounter]=useState(0)
+  // let counter = 0;
+  const addValue = () => {
+    counter =counter+1;
+    console.log(counter)
+  };
+  const removeValue = () => {
+    counter=counter-1;
+  };
   return (
     <div>
       <h1 className="head">React Counter</h1>
-      <h2>Counter Value:0</h2>
-      <button>Add Value</button><br />
-      <button>remove Value</button>
+      <h2>Counter Value:{counter}</h2>
+      <button onClick={addValue}>Add Value</button>
+      <br />
+      <button onClick={removeValue}>remove Value</button>
     </div>
   );
 };

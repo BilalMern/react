@@ -61,9 +61,12 @@ Difference between normal and state variable:
   const [listOfCard,setlistOfCard]=useState([{},{}])
             |              |                   |
       State Variable  Function to call      default 
-                      to whatever
-                      we need to update
-                      in state variable    
+                      to whatever            value of
+                      we need to update      state variable
+                      in state variable
+                      (Responsible for
+                      updation of stare
+                      variable)    
 
 Whenever the State Variable updates React reRender the component.
 
