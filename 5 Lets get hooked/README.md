@@ -67,4 +67,6 @@ Difference between normal and state variable:
 
 Whenever the State Variable updates React reRender the component.
 
+//React says I will controll UI not you means what to update or when to update in UI I(React) will decide it. So react reacts on updation of variables. So to update data React gives us special method which is known as HOOKS.
+
 -useEffect()
