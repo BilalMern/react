@@ -6,11 +6,11 @@ let AppLayout = () => {
   let [counter,setCounter]=useState(0)
   // let counter = 0;
   const addValue = () => {
-    counter =counter+1;
-    console.log(counter)
+   
+    setCounter( counter =counter+1);
   };
   const removeValue = () => {
-    counter=counter-1;
+    setCounter(counter=counter-1);
   };
   return (
     <div>
