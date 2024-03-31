@@ -10,7 +10,12 @@ let AppLayout = () => {
     setCounter( counter =counter+1);
   };
   const removeValue = () => {
-    setCounter(counter=counter-1);
+    
+    // if(counter !==0){setCounter(counter=counter-1);}
+    // else return
+           //OR
+    if(counter === 0) return;
+    else{setCounter(counter -=1)} 
   };
   return (
     <div>
