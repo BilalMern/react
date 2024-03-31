@@ -1,9 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
 import resCardData from "../utils/mockData";
-
+import { useState } from "react";
 
 
 let Body = () => {
+  const[listOfRestaurant,setListOfRestaurant]=useState(resCardData)
     return (
       <div className="body">
         <div className="filter">
