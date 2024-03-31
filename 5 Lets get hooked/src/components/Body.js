@@ -10,14 +10,14 @@ let Body = () => {
         <div className="filter">
           <button className="filter-btn" onClick={()=>{
             //! Filter logic is here!
-            resCardData=resCardData.filter((res)=>res.rating> 4.6)
-            console.log(resCardData)
-          
+            let filteredList=listOfRestaurant.filter((res)=>res.rating> 4.6)
+            
+          setListOfRestaurant(filteredList)
           }}>Top Rated Restaurants</button>
         </div>
         {/* The below div contain so many restaurant carts. */}
         <div className="res-container">
-          {resCardData.map((x) => {
+          {listOfRestaurant.map((x) => {
            return <RestaurantCard resData={x} />
   })}
         </div>
