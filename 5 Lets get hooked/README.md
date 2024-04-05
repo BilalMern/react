@@ -22,7 +22,7 @@ Previously we wrote everything in a single app.js file which is not good practic
 
 All the main code in the react project we generally keep it in a src folder.
 
-In component files we should not add any hardcoded data and hardcoded string like image src.
+In component files we should not add any hardcoded data and hardcoded string like image src. We have to maka another file in the utils folder named as constants.js.
 
 There are two types of import and export, default and named. In one file we can only use one default export. If we have to export multiple things from one file then we use named export. For using named export we just have to write export in front of our variable name. and while importing it we write variable name inside {}.
 
