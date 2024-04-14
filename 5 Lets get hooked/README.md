@@ -76,4 +76,6 @@ Whenever the State Variable updates React reRender the component.Hppls sinks our
 
 -useEffect()
 
-REACT FIBRE: RECONCILIATION ALGORITHM
+REACT FIBRE: (RECONCILIATION ALGORITHM)
+finds the difference between two virtual doms old and new and then update a actual dom.
+virtual dom is a representation of actual dom.
