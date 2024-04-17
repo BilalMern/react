@@ -60,15 +60,23 @@ Difference between normal and state variable:
 
   const [listOfCard,setlistOfCard]=useState([{},{}])
             |              |                   |
-      State Variable  Function to call                 default                                
-                      to whatever            value of
-                      we need to update      state variable
-                      in state variable
-                      (Responsible for
-                      updation of state
-                      variable)    
+      
+      State Variable  
+                      Function to 
+                      Call
 
-Whenever the State Variable updates React reRender the component.Hppls sinks our UI Layer with Data Layer. Whn data changes our UI updates automatically.
+                                                 Default value of state variable to whatever we need to update      
+                                                 in state variable
+                                                 (Responsible for
+                                                 updation of state
+                                                 variable)                 
+                                                            
+                                      
+                     
+                      
+                     
+
+Whenever the State Variable updates React reRender the component.Hooks sinks our UI Layer with Data Layer. When data changes our UI updates automatically.
 
 
 
