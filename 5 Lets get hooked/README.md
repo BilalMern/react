@@ -65,11 +65,7 @@ Difference between normal and state variable:
                       Function to 
                       Call
 
-                                                 Default value of state variable to whatever we need to update      
-                                                 in state variable
-                                                 (Responsible for
-                                                 updation of state
-                                                 variable)                 
+                              Default value of state variable to whatever we need to update in state variable(Responsible for updation of stateVariable)                 
                                                             
                                       
                      
