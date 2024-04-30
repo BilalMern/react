@@ -94,3 +94,11 @@ for example if we have seven card in the UI and when we click filter button our 
 
 If the Interviewer ask you why react is fast because it has virtual Dom, it has a Diff Algorithm, which is very efficient, it can do efficient Dom manipulation.
 The concept of virtual dom existed from a long time in software engineering. React took that and built its own algorithm over that virtual Dom which is known as Diff algorithm.
+
+in a state variable the function which we have to call work as a trigger to start the React Diff Algorithm and update the UI. So when we call that function it will automatically rerender our component.
+
+const [listOfRestaurant,setListOfRestaurant] = useState() is same as:
+const arr= useState();
+const listOfRestaurant = arr[0];
+const setListOfRestaurant =arr[1];
+both methods do same work in first we are destructuring on the fly.
