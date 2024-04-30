@@ -43,12 +43,13 @@ In react Event listener onClick takes a call back function for example:
 button onClick = {()=>{...}}
 
 
-REACT HOOKS: also known as utility functions.
+REACT HOOKS: also known as utility functions. Which maintains the state of the component. and its scope is inside that component.
 To create react super power variables we use hooks. the hooks in the end of the day is simple js functions which is given to us by react its a prebuilt, the only thing is that function comes with super powers.
                  There are two very important hooks:
 -useState()  
           Used to give us superpowerfull state   Variable in react. To use it we have first to import it from react and we always import it as a named import. As we know react hooks are js functions so we have to call it as same as js function when we call it it will give us a state variable and we recieve that variable in array for example:
-let [listOfCards] =useState(); // This is how we create a state variable 
+let [listOfCards] =useState(); // This is how we create a state variable, as we know hooks are just a normal javaScript functions so by calling it hook will give us a state variable which we have to collect in array i.e,
+let [listOfCards] =useState();
 
 Difference between normal and state variable:
   Normal variable:
@@ -72,7 +73,7 @@ Difference between normal and state variable:
                       
                      
 
-Whenever the State Variable updates React reRender the component.Hooks sinks our UI Layer with Data Layer. When data changes our UI updates automatically.
+Whenever the State Variable updates React reRender the component. React does it very fast, in a very optimized way in less code. This is the beauty of React. Because of this React is the most popular library for building UI applications. Here what React is doing is making DOM Operations super fast and efficient. So if we click TOP RATED RESTAURANT button browser has to Rerender that component. That logic of updating this UI is known as Rerendering and this is where React is best. A lot of developers thinks that our web application is fast because we are using React, React is minifyinf our code, React is Bundling our code.. No friends React does not do anything React is only good at DOM operations This is the core logic of React. Hooks sinks our UI Layer with Data Layer. When data changes our UI updates automatically.
 
 
 
@@ -81,5 +82,11 @@ Whenever the State Variable updates React reRender the component.Hooks sinks our
 -useEffect()
 
 REACT FIBRE: (RECONCILIATION ALGORITHM)
-finds the difference between two virtual doms old and new and then update a actual dom.
+finds the difference between two virtual doms old and new or updated and previous and then update a actual dom.
 virtual dom is a representation of actual dom.
+
+Actual Dom:
+Actual Dom is tags i.e <div> <img>.. this is actual dom
+
+Virtual Dom:
+Virtial Dom is representation of actual dom. just like react.createElement gives us an object that object is virtual dom and if we have big structure then react will also give us object. Means if we console.log any component then it will give object. So we can say that it is normal js object. So whatever we see in the UI React keeps the track of all the UI, all the HTML elements as a virtual dom which is kind of object representation of the dom.
