@@ -101,4 +101,4 @@ const [listOfRestaurant,setListOfRestaurant] = useState() is same as:
 const arr= useState();
 const listOfRestaurant = arr[0];
 const setListOfRestaurant =arr[1];
-both methods do same work in first we are destructuring on the fly.
+both methods do same work in first we are destructuring on the fly
