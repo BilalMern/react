@@ -21,4 +21,6 @@ The second approach is as soon as the page loads we will just render our UI. Aft
   LOADS ----> RENDER ----> API ----> RERENDER
 
 In react we will always be using second approach because this is better approach and gives us a better UX because in the first approach till 500ms our page is kind of frozen we dont see anything on the page and after 500ms we suddenly see everything so thats a poor UX. In the second 
-approach we load the page and render what we can, render the skeleton so when we render the page quickly we can see something and then slowly the website loads its a better user experiece and the use did not see the lot of lag and all that kind of stuff. Now we must say that we are rendering twice it does'nt matter because the most important thing about React why React is so popular is because its render cycles are very fast. React has the one of the best render mechanism, React renders our UI very fast 
+approach we load the page and render what we can, render the skeleton so when we render the page quickly we can see something and then slowly the website loads its a better user experiece and the use did not see the lot of lag and all that kind of stuff. Now we must say that we are rendering twice it does'nt matter because the most important thing about React why React is so popular is because its render cycles are very fast. React has the one of the best render mechanism, React renders our UI very fast.
+
+
