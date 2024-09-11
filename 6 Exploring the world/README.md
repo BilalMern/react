@@ -27,4 +27,4 @@ To code in second approach we have to use useEffect hook. Hooks are just a norma
 useEffect takes two arguments, first is callback function and the second is dependency array.
 i.e:
               useEffect (()=>{},[])
-here callback function will be called after component renders
+here callback function will be called after component renders. for example if we are using useEffect hook in Body component so when the Body component will load it will render the component and as soon as the render cycle is finished it will call this callback function which we have passed into useEffect.
