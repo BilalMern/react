@@ -12,6 +12,7 @@ let Body = () => {
             //! Filter logic is here!
             let filteredList=listOfRestaurant.filter((res)=>res.rating> 4.6)
             
+            
           setListOfRestaurant(filteredList)
           }}>Top Rated Restaurants</button>
         </div>
