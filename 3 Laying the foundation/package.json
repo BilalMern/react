@@ -2,10 +2,9 @@
   "name": "2-igniting-our-app",
   "version": "1.0.0",
   "description": "Igniting our app",
-  
   "scripts": {
-    "start":"parcel index.html",  
-    "build":"parcel build index.html",
+    "start": "npx parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {

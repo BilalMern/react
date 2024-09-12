@@ -22,9 +22,15 @@ The second approach is as soon as the page loads we will just render our UI. Aft
 
 In react we will always be using second approach because this is better approach and gives us a better UX because in the first approach till 500ms our page is kind of frozen we dont see anything on the page and after 500ms we suddenly see everything so thats a poor UX. In the second 
 approach we load the page and render what we can, render the skeleton so when we render the page quickly we can see something and then slowly the website loads its a better user experiece and the use did not see the lot of lag and all that kind of stuff. Now we must say that we are rendering twice it does'nt matter because the most important thing about React why React is so popular is because its render cycles are very fast. React has the one of the best render mechanism, React renders our UI very fast.
+ 
+useEffect HooK:
 
 To code in second approach we have to use useEffect hook. Hooks are just a normal javaScript functions which react gives to us these has there own specific usecase where we use these functions. So just like useState is used to create state variable, useEffect is used to render the things after comonent renders.
 useEffect takes two arguments, first is callback function and the second is dependency array.
 i.e:
               useEffect (()=>{},[])
-here callback function will be called after component renders. for example if we are using useEffect hook in Body component so when the Body component will load it will render the component and as soon as the render cycle is finished it will call this callback function which we have passed into useEffect.
+here callback function will be called after component renders. for example if we are using useEffect hook in Body component so when the Body component will load it will render the component and as soon as the render cycle is finished it will call this callback function which we have passed into useEffect or in easy words when the Body component will render, it will render it and as soon as the render cycle is finished, it will just quickly call this callback function so this is how this useEffect hook will work.
+
+SHIMMER UI: 
+We load fake page until we get the actual data from the API. This is a good practice for example if we use loading icon instead of shimmer UI, then while loading spinner is spinning, suddenly our page loads and things appear in front of us which is very painful for eyes as suddenly somethinf unimagined pops up in front of us and this is bad user experience. So by using shimmer UI user can anticipate that okay there will be cards which will be loading over here.
+

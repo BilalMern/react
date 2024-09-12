@@ -1,10 +1,13 @@
 import RestaurantCard from "./RestaurantCard";
 import resCardData from "../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 let Body = () => {
-  const[listOfRestaurant,setListOfRestaurant]=useState(resCardData)
+  const[listOfRestaurant,setListOfRestaurant]=useState(resCardData);
+  useEffect(()=>{
+    console.log("useEffect called!")
+  },[])
     return (
       <div className="body">
         <div className="filter">
@@ -25,6 +28,9 @@ let Body = () => {
     );
   };
  export default Body; 
+
+
+
 
 
 
