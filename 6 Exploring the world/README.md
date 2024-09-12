@@ -34,3 +34,9 @@ here callback function will be called after component renders. for example if we
 SHIMMER UI: 
 We load fake page until we get the actual data from the API. This is a good practice for example if we use loading icon instead of shimmer UI, then while loading spinner is spinning, suddenly our page loads and things appear in front of us which is very painful for eyes as suddenly somethinf unimagined pops up in front of us and this is bad user experience. So by using shimmer UI user can anticipate that okay there will be cards which will be loading over here.
 
+CONDITIONAL RENDERING:
+Rendering on the basis of condition is known as conditional rendering.
+ie:
+if(listOfRestaurant.length ===0){
+  return <Shimmer/>
+}
