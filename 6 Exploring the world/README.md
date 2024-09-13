@@ -34,9 +34,20 @@ here callback function will be called after component renders. for example if we
 SHIMMER UI: 
 We load fake page until we get the actual data from the API. This is a good practice for example if we use loading icon instead of shimmer UI, then while loading spinner is spinning, suddenly our page loads and things appear in front of us which is very painful for eyes as suddenly somethinf unimagined pops up in front of us and this is bad user experience. So by using shimmer UI user can anticipate that okay there will be cards which will be loading over here.
 
+
 CONDITIONAL RENDERING:
 Rendering on the basis of condition is known as conditional rendering.
 ie:
 if(listOfRestaurant.length ===0){
   return <Shimmer/>
 }
+
+
+useState Hook DETAILS:
+By using simple variable, Ract dont know whether it is updated or not thats why useState hook gives us a special variable known as STATE VARIABLE by which react knows and keep track of updation. For example if we are using useState hook in our Header component so whenever this state variable will change React will Re-render this Header component React is kind of refresh this Header component and all the updated values will be there means it triggers the reconciliation, means calculating the difference between old state of virtual dom and new state of virtual dom and then updating the UI. Here React is rendering the whole Header component, but React is only refreshing the things which are changed or updated the other things which are not changed will remain intact without even refresh. For example if we have logo, lists and a btn in our Header component and we only changed our button using state variable what happens is React will only refresh the button after re-rendering the whole Header component.
+
+One important question arises from useState Hook is that how a constant variable be changed which is against the javascript rules? i.e
+
+const [variablelist,setVariableList]=useState(simpleVariable)
+setVariableList(newVariable)
+The answer to this is whenever we update the value by using setVariableList() React is updating the variablelist and it is calling this Header component once again or renderin it once again but this time when we invoke that function, this variablelist is a new variable then it was before. This is the beauty of React.
