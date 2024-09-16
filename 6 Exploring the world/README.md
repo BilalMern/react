@@ -51,4 +51,4 @@ One important question arises from useState Hook is that how a constant variable
 
 const [variablelist,setVariableList]=useState(simpleVariable)
 setVariableList(newVariable)
-The answer to this is whenever we update the value by using setVariableList() React is updating the variablelist and it is calling this Header component once again or renderin it once again but this time when we invoke that function, this variablelist is a new variable then it was before. This is the beauty of React.
+The answer to this is whenever we update the value by using setVariableList() React is updating the variablelist and it is calling this Header component once again or renderin it once again but this time when we invoke that function, this variablelist is a new variable then it was before. This is the beauty of React
