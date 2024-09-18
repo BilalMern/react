@@ -11,6 +11,10 @@ let Body = () => {
     return (
       <div className="body">
         <div className="filter">
+          <div className="search filter-btn">
+            <input type="text" className="search-box" />
+            <button>Search</button>
+          </div>
           <button className="filter-btn" onClick={()=>{
             //! Filter logic is here!
             let filteredList=listOfRestaurant.filter((res)=>res.rating> 4.6)
