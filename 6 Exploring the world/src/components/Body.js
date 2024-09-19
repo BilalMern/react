@@ -17,10 +17,11 @@ let Body = () => {
             <input type="text" className="search-box" value={searchText} onChange={(e)=>{
 setsearchText(e.target.value)
             }}/>
-            {/* with every key press in input what happens is we are changing the local state variable and what happens when we change this local state variable React re-renders the component it means whenever this state variale is getting updated on every key pressed, our whole Body component is getting re-rendered for exapmple if we write cafe in input on every letter C A F E our whole Body component will re-render. */}
+            {/* with every key press in input what happens is we are changing the local state variable and what happens when we change this local state variable React re-renders the component it means whenever this state variale is getting updated on every key pressed, our whole Body component is getting re-rendered for exapmple if we write cafe in input on every letter C A F E our whole Body component will re-render but it is only updating the input box value inside the DOM.  */}
             <button onClick={()=>{
               //filter the restaurant card and update the UI.
-console.log(searchText)
+let filteredRes= listOfRestaurant.filter((res)=>res.cuisine.includes (searchText))
+setListOfRestaurant(filteredRes)
             }}>Search</button>
           </div>
           <button className="filter-btn" onClick={()=>{
