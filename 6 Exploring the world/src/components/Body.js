@@ -47,6 +47,7 @@ import { useEffect, useState } from "react";
 
 let Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState(resCardData);
+  const [filteredRestaurant,setFilterRestaurant]= useState(resCardData)
   const [searchText, setsearchText] = useState("");
   console.log("body rendered");
   useEffect(() => {
@@ -69,7 +70,7 @@ let Body = () => {
                 res.cuisine.toLowerCase().includes(searchText.toLowerCase())
               );
 
-              setListOfRestaurant(filteredRes);
+              setFilterRestaurant(filteredRes);
             }}
           >
             Search
@@ -91,7 +92,7 @@ let Body = () => {
       </div>
       {/* The below div contain so many restaurant carts. */}
       <div className="res-container">
-        {listOfRestaurant.map((x) => {
+        {filteredRestaurant.map((x) => {
           return <RestaurantCard resData={x} />;
         })}
       </div>
