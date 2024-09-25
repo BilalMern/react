@@ -37,7 +37,8 @@ Different cases of Dependency Array
 
 --> if there is no dependency array that means useEffect will be called on every render. Means when we change or update something, useEffect will be called on each change and on each change React re-renders the component and on each render useEffect will be called.
 
---> if there is empty dependency array ( [] ), if the dependency array is empty then useEffect will be called on intitial render (just once) when the component is render for the first time. 
+--> if there is empty dependency array ( [] ), if the dependency array is empty then useEffect will be called on intitial render (just once) when the component is render for the first time. Means useEffect will not be called again and again even if the component re-renders.
+                       The basic nature or the default behaviour of the useEffect is to be called after each render, but if we give it a dependency array then it will just be called once.
 
 SHIMMER UI: 
 We load fake page until we get the actual data from the API. This is a good practice for example if we use loading icon instead of shimmer UI, then while loading spinner is spinning, suddenly our page loads and things appear in front of us which is very painful for eyes as suddenly somethinf unimagined pops up in front of us and this is bad user experience. So by using shimmer UI user can anticipate that okay there will be cards which will be loading over here.
