@@ -38,7 +38,10 @@ Different cases of Dependency Array
 --> if there is no dependency array that means useEffect will be called on every render. Means when we change or update something, useEffect will be called on each change and on each change React re-renders the component and on each render useEffect will be called.
 
 --> if there is empty dependency array ( [] ), if the dependency array is empty then useEffect will be called on intitial render (just once) when the component is render for the first time. Means useEffect will not be called again and again even if the component re-renders.
-                       The basic nature or the default behaviour of the useEffect is to be called after each render, but if we give it a dependency array then it will just be called once.
+
+The basic nature or the default behaviour of the useEffect is to be called after each render, but if we give it a dependency array then it will just be called once.
+
+--> if we put something inside dependency array, then it will only be called everytime when the dependency changes                              
 
 SHIMMER UI: 
 We load fake page until we get the actual data from the API. This is a good practice for example if we use loading icon instead of shimmer UI, then while loading spinner is spinning, suddenly our page loads and things appear in front of us which is very painful for eyes as suddenly somethinf unimagined pops up in front of us and this is bad user experience. So by using shimmer UI user can anticipate that okay there will be cards which will be loading over here.
@@ -62,3 +65,4 @@ const [variablelist,setVariableList]=useState(simpleVariable)
 setVariableList(newVariable)
 The answer to this is whenever we update the value by using setVariableList() React is updating the variablelist and it is calling this Header component once again or rendering it once again but this time when we invoke that function, this variablelist is a new variable then it was before. This is the beauty of React. React has such amazing Reconciliation process such amazing Rendering process and it does the redering process or DOM manipulation very fast and efficiently.
 
+We have to keep in our mind that useState will always be used inside body of functional Component, and try to call this hook on the top of a component body. And never use useState hook or create local state variable in if else condition, simple functions and in for loop.
