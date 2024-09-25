@@ -29,7 +29,15 @@ To code in second approach we have to use useEffect hook. Hooks are just a norma
 useEffect takes two arguments, first is callback function and the second is dependency array.
 i.e:
               useEffect (()=>{},[])
-here callback function will be called after component renders. for example if we are using useEffect hook in Body component so when the Body component will load it will render the component and as soon as the render cycle is finished it will call this callback function which we have passed into useEffect or in easy words when the Body component will render, it will render it and as soon as the render cycle is finished, it will just quickly call this callback function so this is how this useEffect hook will work.
+here callback function will be called after component renders. for example if we are using useEffect hook in Body component so when the Body component will load it will render the component and as soon as the render cycle is finished it will call this callback function which we have passed into useEffect or in easy words when the Body component will render, it will render it and as soon as the render cycle is finished, it will just quickly call this callback function so this is how this useEffect hook will work. There are three cases for dependecy array:  
+
+UseEffect will be called every time our Component renders. And if put a dependency array in it, then dependency array changes the behaviour of its render. Putting a dependency array is not mandatory only callback function is mandatory in useEffect. So when we call useEffect without a dependency array, it will render every time our component render.
+
+Different cases of Dependency Array
+
+--> if there is no dependency array that means useEffect will e called on every render. for example we have a useEffect on Header and on a Body component, if there is no dependency array in Header component what it will do is every time Header component renders it triggers the useEffect present in Body component along with Header useEffect. 
+
+--> if there is empty dependency array ( [] ), if the dependency array is empty then useEffect will be called on intitial render (just once) when the component is render for the first time. Means if we have a useEffect on Header and a Body component if there is empty dependency array in Header component and we changes the state in Header what it will do is useEffect of Body component only be called on initial render.
 
 SHIMMER UI: 
 We load fake page until we get the actual data from the API. This is a good practice for example if we use loading icon instead of shimmer UI, then while loading spinner is spinning, suddenly our page loads and things appear in front of us which is very painful for eyes as suddenly somethinf unimagined pops up in front of us and this is bad user experience. So by using shimmer UI user can anticipate that okay there will be cards which will be loading over here.
