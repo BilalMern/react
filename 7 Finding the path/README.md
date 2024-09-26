@@ -21,5 +21,9 @@ root.render(<RouterProvider router = {appRouter} />)
 
 So this is how we can create different routes in react.
 
-We have a shortcut to make a quick Compoenent boiler plate which is "rafce"
+We have a shortcut to make a quick Compoenent boiler plate which is "rafce".
+
+To handle the errors react-roter-dom gives us a hook which is useRouterError which we have to import and it gives us an object with extra information which we can show to the user.
+
+//Whenever we see a function starting from "use" it means its a hook, it a common convention to start a hook with word use. 
 
