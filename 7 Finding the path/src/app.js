@@ -4,7 +4,7 @@ import Header from "./components/Header"; //! when we are importing a component 
 import Body from "./components/Body";
 import About from "./components/About";
 import { createBrowserRouter, RouterProvider } from "react-router-dom"; //! this will create routing configuration.
-
+import Error from "./components/Error";
 
 
 let AppLayout = () => {
@@ -18,7 +18,8 @@ let AppLayout = () => {
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <AppLayout/>
+    element: <AppLayout/>,
+    errorElement: <Error/>
   },
   {
     path: "/about",
