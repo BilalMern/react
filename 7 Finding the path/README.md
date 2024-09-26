@@ -16,4 +16,10 @@ const appRouter = createBrowserRouter([
     path: "/about",
   }
 ])
+But just creating the configuration won't work, we have to provide this configuration to render it on the page. For that we have to import one more Component from which we can import from react-router-dom which is known as RouterProvider. This will provide our routing configuration to our app. For that instead of rendering AppLayout on main root we have to render this component i.e:
+root.render(<RouterProvider router = {appRouter} />)
+
+So this is how we can create different routes in react.
+
+We have a shortcut to make a quick Compoenent boiler plate which is "rafce"
 
