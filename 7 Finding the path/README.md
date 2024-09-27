@@ -25,5 +25,26 @@ We have a shortcut to make a quick Compoenent boiler plate which is "rafce".
 
 To handle the errors react-roter-dom gives us a hook which is useRouterError which we have to import and it gives us an object with extra information which we can show to the user.
 
-//Whenever we see a function starting from "use" it means its a hook, it a common convention to start a hook with word use. 
+//Whenever we see a function starting from "use" it means its a hook, it a common convention to start a hook with word use.
+
+CHILDREN ROUTES:
+If we have to keep our Header intact and we just want to change the page below our Header suppose if we are on About page so about page should load below the Header and Header should always be there. So to create this functionality we have to create children routes. Here we have to give a children list to our main configuration means root route ("/").
+
+{
+    path:"/",
+    element:<AppLayout/>,
+    children:[
+{
+  path: "/about",
+  element: <About/>
+  },
+  {
+    path: "/contact",
+    element: <Contact/>
+  }
+    ]
+  },
+
+Above we have created childrens on root route now /about and /contact are childrens of AppLayout. Now we have to render childrens in our AppLayout accordingly means we have to push children there according to the route, if our path is /about then about element will be gone up after Header component in AppLayout and respectively. Here AppLayout has three childrens and we want to load these childrens according to the path, for doing this react-router-dom has given us a Component which is Outlet which we have to import and we use it where we want to load the childrens according to the path.
+  
 

@@ -40,29 +40,39 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
 let AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Body />
+      <Outlet />  
+      {/* This Outlet will be filled with the children according to the path of which page we are on.    */}
     </div>
   );
 };
 const appRouter = createBrowserRouter([
   {
     path:"/",
-    element:<AppLayout/>
+    element:<AppLayout/>,
+    children:[
+      {
+        path: "/",
+        element:<Body/>
+      },
+      {
+        path: "/about",
+        element: <About/>
+        },
+        {
+          path: "/contact",
+          element: <Contact/>
+        }
+    ]
   },
-  {
-  path: "/about",
-  element: <About/>
-  },
-  {
-    path: "/contact",
-    element: <Contact/>
-  }
-])
+  
+]) //Here AppLayout has three childrens and we want to load these childrens according to the path.
 
 let root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter}/>);
