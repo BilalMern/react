@@ -37,8 +37,10 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header"; //! when we are importing a component then giving a file extension is not necessary.
 import Body from "./components/Body";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
+
 let AppLayout = () => {
   return (
     <div className="app">
@@ -47,17 +49,21 @@ let AppLayout = () => {
     </div>
   );
 };
-const approuter = createBrowserRouter([
+const appRouter = createBrowserRouter([
   {
-    path: "/",
-    element: <AppLayout/>
+    path:"/",
+    element:<AppLayout/>
   },
   {
-    path: "/about",
-    element: <About/>
+  path: "/about",
+  element: <About/>
+  },
+  {
+    path: "/contact",
+    element: <Contact/>
   }
 ])
 
 let root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={approuter}/>);
+root.render(<RouterProvider router={appRouter}/>);
 
