@@ -45,6 +45,9 @@ If we have to keep our Header intact and we just want to change the page below o
     ]
   },
 
-Above we have created childrens on root route now /about and /contact are childrens of AppLayout. Now we have to render childrens in our AppLayout accordingly means we have to push children there according to the route, if our path is /about then about element will be gone up after Header component in AppLayout and respectively. Here AppLayout has three childrens and we want to load these childrens according to the path, for doing this react-router-dom has given us a Component which is Outlet which we have to import and we use it where we want to load the childrens according to the path.
+Above we have created childrens on root route now /about and /contact are childrens of AppLayout. Now we have to render childrens in our AppLayout accordingly means we have to push children there according to the route, if our path is /about then about element will be gone up after Header component in AppLayout and respectively. Here AppLayout has three childrens and we want to load these childrens according to the path, for doing this react-router-dom has given us a Component which is Outlet which we have to import and we use it where we want to load the childrens according to the path. This is how we can create children routes and loads these children routes inside the Outlet. 
   
 
+LINKS:
+Now to create links, means when we click on About us it will take us to About us page.
+In React if we want to route to some other page, we should never use anchor tag <a>  </a> because by using this the whole page will refresh on clicking to it. So how we can route to other page without refreshing the whole page, we can navigate to the new page without reloading the whole page
