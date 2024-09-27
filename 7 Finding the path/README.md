@@ -1,3 +1,4 @@
+ROUTING:
 We will see how we can create different routes insides our React application. We will be using npm javaScript library known as React Router Dom. This is one of the most popular libraries. We will install this library in our code or project by using npm package for that we have to write a command: 
 npm i react-router-dom
 
@@ -51,3 +52,7 @@ Above we have created childrens on root route now /about and /contact are childr
 LINKS:
 Now to create links, means when we click on About us it will take us to About us page.
 In React if we want to route to some other page, we should never use anchor tag <a>  </a> because by using this the whole page will refresh on clicking to it. So how we can route to other page without refreshing the whole page, we can navigate to the new page without reloading the whole page by using Link Component given to us by react-router-dom which works exactly same as anchor tag. When we have to navigate routes we dont have to reload our whole page this is known as Single Page Application, means browser will not reload our website, browser will not make an external call.
+
+TYPES OF ROUTING:
+There are two types of routing, Client side routing and Server side routing
+
