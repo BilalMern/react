@@ -54,5 +54,8 @@ Now to create links, means when we click on About us it will take us to About us
 In React if we want to route to some other page, we should never use anchor tag <a>  </a> because by using this the whole page will refresh on clicking to it. So how we can route to other page without refreshing the whole page, we can navigate to the new page without reloading the whole page by using Link Component given to us by react-router-dom which works exactly same as anchor tag. When we have to navigate routes we dont have to reload our whole page this is known as Single Page Application, means browser will not reload our website, browser will not make an external call.
 
 TYPES OF ROUTING:
-There are two types of routing, Client side routing and Server side routing
+There are two types of routing, Client side routing and Server side routing. 
 
+Server side routing means, if we have index.html, about.html and contact.html, if we click on our Link (anchor) tag of about page, it reload the whole page it send data call to about.html and fetches that html and render it on to the web page means it makes the network call gets the data of about.html from server and render it on the UI.
+
+Client sede routing means all the Components are already loaded in our app so when we click on about Link it just load that component 

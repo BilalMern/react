@@ -4,6 +4,7 @@ import Header from "./components/Header"; //! when we are importing a component 
 import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import { Outlet } from "react-router-dom";
@@ -35,6 +36,10 @@ const appRouter = createBrowserRouter([
         {
           path: "/contact",
           element: <Contact/>
+        },
+        {
+          path: "/RestaurantMenu/:123",// this is the way of writing path for dynamic routes
+          element: <RestaurantMenu/>
         }
     ]
   },
