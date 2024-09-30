@@ -1,4 +1,4 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 
 
 // const RestaurantMenu = ()=>{
@@ -6,7 +6,7 @@
 // fetchMenu();
 // },[])
 // const fetchMenu = async ()=>{
-//     const data = await fetch("")
+//     const data = await fetch("https://jsonplaceholder.typicode.com/users")
 //     const json = await data.json()
 //     console.log(json)
 // } 
