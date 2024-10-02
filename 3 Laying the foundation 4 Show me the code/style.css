@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    
+}
+body{
+    margin: 0px 10px 0px 10px;
+}
+
+.nav-items ul{
+    display: flex;
+    gap: 40px;
+}
+.nav-items ul li{
+    list-style: none;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-right: 25px;
+   
+}
+
+.res-card{
+    width: 150px;
+    height: 205px;
+   
+    background-color: #f0f0f0;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+ 
+}
+.res-card:hover{
+    border: 1px solid black;
+}
+.search{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.search-center{
+    display: flex;
+    justify-content: center;
+}
+
+.resCard-img{
+    width: 140px;
+    height: 100px;
+    
+}

@@ -1,3 +1,139 @@
+// // import RestaurantCard from "./RestaurantCard";
+// // import resCardData from "../utils/mockData";
+// // import { useEffect, useState } from "react";
+
+// // let Body = () => {
+// //   const [listOfRestaurant, setListOfRestaurant] = useState(resCardData);
+// //   const [filteredRestaurant,setFilterRestaurant]= useState(resCardData)
+// //   const [searchText, setsearchText] = useState("");
+ 
+// //   useEffect(() => {
+// //     console.log("useEffect called!");
+// //   }, []);
+// //   return (
+// //     <div className="body">
+// //       <div className="filter">
+// //         <div className="search filter-btn">
+// //           <input
+// //             type="text"
+// //             value={searchText}
+// //             onChange={(e) => {
+// //               setsearchText(e.target.value);
+// //             }}
+// //           />
+// //           <button
+// //             onClick={() => {
+// //               let filteredRes = listOfRestaurant.filter((res) =>
+// //                 res.cuisine.toLowerCase().includes(searchText.toLowerCase())
+// //               );
+
+// //              setFilterRestaurant(filteredRes);
+// //             }}
+// //           >
+// //             Search
+// //           </button>
+// //         </div>
+// //         <button
+// //           className="filter-btn"
+// //           onClick={() => {
+// //             //! Filter logic is here!
+// //             let filteredList = listOfRestaurant.filter(
+// //               (res) => res.rating > 4.6
+// //             );
+
+// //             setFilterRestaurant(filteredList);
+// //           }}
+// //         >
+// //           Top Rated Restaurants
+// //         </button>
+// //       </div>
+// //       {/* The below div contain so many restaurant carts. */}
+// //       <div className="res-container">
+// //         {filteredRestaurant.map((x) => {
+// //           return <RestaurantCard resData={x} />;
+// //         })}
+// //       </div>
+// //     </div>
+// //   );
+// // };
+// // export default Body;
+
+
+
+
+
+// import RestaurantCard from "./RestaurantCard";
+// import resCardData from "../utils/mockData";
+// import { useEffect, useState } from "react";
+
+// let Body = () => {
+//   const [listOfRestaurant, setListOfRestaurant] = useState(resCardData);
+//   const [filteredRestaurant,setFilterRestaurant]= useState(resCardData)
+//   const [searchText, setsearchText] = useState("");
+ 
+//   useEffect(() => {
+//    fetchData();    
+//   }, []);
+
+// const fetchData = async ()=>{
+//   const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/mapi/homepage/getCards?lat=12.9352403&lng=77.62453");
+// const jsonData = await data.json();
+// console.log(jsonData)
+// } 
+
+// return (
+//     <div className="body">
+//       <div className="filter">
+//         <div className="search filter-btn">
+//           <input
+//             type="text"
+//             value={searchText}
+//             onChange={(e) => {
+//               setsearchText(e.target.value);
+//             }}
+//           />
+//           <button
+//             onClick={() => {
+//               let filteredRes = listOfRestaurant.filter((res) =>
+//                 res.cuisine.toLowerCase().includes(searchText.toLowerCase())
+//               );
+
+//              setFilterRestaurant(filteredRes);
+//             }}
+//           >
+//             Search
+//           </button>
+//         </div>
+//         <button
+//           className="filter-btn"
+//           onClick={() => {
+//             //! Filter logic is here!
+//             let filteredList = listOfRestaurant.filter(
+//               (res) => res.rating > 4.6
+//             );
+
+//             setFilterRestaurant(filteredList);
+//           }}
+//         >
+//           Top Rated Restaurants
+//         </button>
+//       </div>
+//       {/* The below div contain so many restaurant carts. */}
+//       <div className="res-container">
+//         {filteredRestaurant.map((x) => {
+//           return <RestaurantCard resData={x} />;
+//         })}
+//       </div>
+//     </div>
+//   );
+// };
+// export default Body;
+
+
+
+
+
+
 // import RestaurantCard from "./RestaurantCard";
 // import resCardData from "../utils/mockData";
 // import { useEffect, useState } from "react";
@@ -68,42 +204,23 @@ import { useEffect, useState } from "react";
 
 let Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState(resCardData);
-  const [filteredRestaurant,setFilterRestaurant]= useState(resCardData)
-  const [searchText, setsearchText] = useState("");
+  // const [filteredRestaurant,setFilterRestaurant]= useState(resCardData)
+  // const [searchText, setsearchText] = useState("");
  
   useEffect(() => {
    fetchData();    
   }, []);
 
 const fetchData = async ()=>{
-  const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/mapi/homepage/getCards?lat=24.85910&lng=66.99830");
+  const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/mapi/homepage/getCards?lat=12.9352403&lng=77.62453");
 const jsonData = await data.json();
-console.log(jsonData)
+setListOfRestaurant(jsonData.data.success.cards[3].gridWidget.gridElements.infoWithStyle.restaurants)
 } 
 
 return (
     <div className="body">
       <div className="filter">
-        <div className="search filter-btn">
-          <input
-            type="text"
-            value={searchText}
-            onChange={(e) => {
-              setsearchText(e.target.value);
-            }}
-          />
-          <button
-            onClick={() => {
-              let filteredRes = listOfRestaurant.filter((res) =>
-                res.cuisine.toLowerCase().includes(searchText.toLowerCase())
-              );
-
-             setFilterRestaurant(filteredRes);
-            }}
-          >
-            Search
-          </button>
-        </div>
+       
         <button
           className="filter-btn"
           onClick={() => {
@@ -112,7 +229,7 @@ return (
               (res) => res.rating > 4.6
             );
 
-            setFilterRestaurant(filteredList);
+            setListOfRestaurant(filteredList);
           }}
         >
           Top Rated Restaurants
@@ -120,7 +237,7 @@ return (
       </div>
       {/* The below div contain so many restaurant carts. */}
       <div className="res-container">
-        {filteredRestaurant.map((x) => {
+        {listOfRestaurant.map((x) => {
           return <RestaurantCard resData={x} />;
         })}
       </div>
