@@ -1,0 +1,43 @@
+if we have to write css in jsx then we have to write it in object, i.e:
+ let styleCard={
+    color: red,
+ } 
+  const Card =()=>{
+     return (
+         <div style={styleCard}>hello there!</div> OR
+        <div style ={{color:red}}>
+    ) 
+  } this will make text color red. 
+
+
+
+Making our cards dynamic by using props:
+*  Props are just normal function arguments: passing a prop to a component means passing a argument to a function.
+* React will wrap all the props as an object and passing over props parameter.
+* To pass some dynamic data to component we can pass it as a props. 
+Very core Concept use in Industry 
+* This concept is known as CONFIG DRIVEN UI. Suppose restaurant have some offers in its different branches in different cities so the the only offers of persons respective cities are shown to them means these offers will be different for karachi and will be different for islamabad and like that. so it means our website is driven by data. So CONFIG DRIVEN UI controlling our UI how the UI looks using DATA using a config which is comes from BACKEND.
+* In now a days websites are built using config driven UI by which data may be different in different cities. We have writen the UI once and now according to the data which is coming from backend our UI is getting changed. This is known as config driven UI.
+
+if we have to write css in jsx then we have to write it in object, i.e:
+ let styleCard={
+    color: red,
+ } 
+const Card =()=>{
+     return (
+         <div style={styleCard}>hello there!</div> OR
+        <div style ={{color:red}}>
+    ) 
+} this will make text color red. 
+
+
+
+Making our cards dynamic by using props:
+*  Props are just normal function arguments: passing a prop to a component means passing a argument to a function.
+* React will wrap all the props as an object and passing over props parameter.
+* To pass some dynamic data to component we can pass it as a props.  -->
+
+Very core Concept use in Industry 
+* This concept is known as CONFIG DRIVEN UI. Suppose restaurant have some offers in its different branches in different cities so the the only offers of persons respective cities are shown to them means these offers will be different for karachi and will be different for islamabad and like that. so it means our website is driven by data. So CONFIG DRIVEN UI controlling our UI how the UI looks using DATA using a config which is comes from BACKEND.
+* In now a days websites are built using config driven UI by which data may be different in different cities. We have writen the UI once and now according to the data which is coming from backend our UI is getting changed. This is known as config driven UI.
+
