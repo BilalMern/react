@@ -43,3 +43,5 @@ Very core Concept use in Industry
 
 Importance of Key:
 When we loop on same level components or whe we have multiple components on same level then each component must have unique key. if there is no key present then React will not able to keep track of them for example if we add one more component in second place then React never know where to insert it and it will Render all the components, But by giving key(id) to them React will able to detect that where to insert new component and it will not render all the components just render the new one.
+
+So in React whenever we use "map" we have to give each component unique key.
