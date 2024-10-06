@@ -101,4 +101,8 @@ const [listOfRestaurant,setListOfRestaurant] = useState() is same as:
 const arr= useState();
 const listOfRestaurant = arr[0];
 const setListOfRestaurant =arr[1];
-both methods do same work in first we are destructuring on the fly
+both methods do same work in first we are destructuring on the fly.
+
+//Never ever keeps any hard coded string in Component file. We should keep them in constant.js file in the folder name as utils or common or config. And its a good practice to name a constants in a CAPITAL letters.
+
+//In one file we can only have one default export, we cannot use export default twice in one file. If we have to export multiple things from single file then we use named export.

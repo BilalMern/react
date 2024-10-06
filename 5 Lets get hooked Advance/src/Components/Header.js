@@ -1,3 +1,4 @@
+import { LOGO_URL } from "./utils/constant";
 const Header = () => {
     return (
       <div className="header">
@@ -6,7 +7,7 @@ const Header = () => {
             className="logo"
             height={80}
             width={120}
-            src="https://png.pngtree.com/png-clipart/20200720/original/pngtree-abstract-logo-for-cafe-or-restaurant-graphic-food-icon-symbol-for-png-image_4316818.jpg"
+            src={LOGO_URL}
             alt=""
           />
         </div>

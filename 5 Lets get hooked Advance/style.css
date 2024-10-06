@@ -64,6 +64,26 @@ justify-content: center;
 gap: 15px;
 } 
 
-
+.top_rated{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 25px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    width: 160px;
+    text-align: center;
+}
+.filter_btn{
+   margin-top: 4px;
+   border: none;
+   cursor: pointer;
+   font-weight: bolder;
+  
+   
+}
+.top_rated:hover{
+    border: 1px solid black;
+    border-radius: 3px;
+}
 
 
