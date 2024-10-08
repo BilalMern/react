@@ -1,108 +1,68 @@
-App-Layout
-  Header
-    -Logo
-    -Nav Items
-  Body
-    -Search
-    -RestaurantContainer
-      -RestaurantCard
-        -Name of Restaurant
-        -Image
-        -Name of the Restaurant, Star Rating, Cuisines, Delivery Time
-  Footer
-    -Copyright
-    -Links
-    -Address
-    -Contact
+MONOLITH ARCHITECTURE:
+when the apps were developed traditionally they were all developed using a Monolith Architecture. What does it mean, so earlier we have a huge big project and suppose if we are building an application in this huge project we used to have small pieces we have developed API's inside this project we also have UI code inside the same project we have Authentication code inside it and also database. Now suppose if we have to change minor thing like color of a button what we used to do is we have to build this whole project we have to compile this whole project and we have to deploye this whole project so that is Monolith Architecture.
 
-
-Every thing that react can do we can do that using normal html css javascript. Why do we then use react ? The beauty of using Framework or Library is that it makes developer experience easy it makes us write less code and do more on the web page. This is the major job of UI framework or library is. So react gives us superpowers so that we can build these large scalable production ready performant application. React makes our coding experience very fast and also optimize somethings on web page so that things happens very fast. We will now start to see the real superpowers of React now.
-
-Previously we wrote everything in a single app.js file which is not good practice. A best practice in the industry is to make separate files for separate components. And after making separate file for each folder we have to first export it in the file and then import it in our main app where we want to use that component.
-
-All the main code in the react project we generally keep it in a src folder.
-
-In component files we should not add any hardcoded data and hardcoded string like image src. We have to maka another file in the utils folder named as constants.js.
-
-There are two types of import and export, default and named. In one file we can only use one default export. If we have to export multiple things from one file then we use named export. For using named export we just have to write export in front of our variable name. and while importing it we write variable name inside {}.
-
-for example:
- -Default Import Export:
-   export default component(or variable name);
-   import component from "path";
-  
- -Named Import Export:
-   export const component;
-   import {component} from "path";
-
-In path ./ means accessing file from same folder and when import something from same file ./ is necessary to write because if we dont write it then it is considered as a node module part. So by writing ./ we insure that it is local file not in node-modules.
-
-Suppose if we have to keep our data and the UI layer consistent or parelled to each other that is where react comes into the picture.
-
-In react Event listener onClick takes a call back function for example:
-button onClick = {()=>{...}}
-
-
-REACT HOOKS: also known as utility functions. Which maintains the state of the component. and its scope is inside that component.
-To create react super power variables we use hooks. the hooks in the end of the day is simple js functions which is given to us by react its a prebuilt, the only thing is that function comes with super powers.
-                 There are two very important hooks:
--useState()  
-          Used to give us superpowerfull state   Variable in react. To use it we have first to import it from react and we always import it as a named import. As we know react hooks are js functions so we have to call it as same as js function when we call it it will give us a state variable and we recieve that variable in array for example:
-let [listOfCards] =useState(); // This is how we create a state variable, as we know hooks are just a normal javaScript functions so by calling it hook will give us a state variable which we have to collect in array i.e,
-let [listOfCards] =useState();
-
-Difference between normal and state variable:
-  Normal variable:
-    let listOfCard;
-  State variable:
-    const [listOfCard]=useState() //To give default value to variable we have to write it in function arguement i.e:  cont [listOfCard]=useState([{},{},{},{}]);
-  
-  and if we have to update the value of state variable then we have to give second parameter to it which is itself a function and by calling it we can give the value to update.
-
-  const [listOfCard,setlistOfCard]=useState([{},{}])
-            |              |                   |
-      
-      State Variable  
-                      Function to 
-                      Call
-
-                              Default value of state variable to whatever we need to update in state variable(Responsible for updation of stateVariable)                 
-                                                            
-                                      
-                     
-                      
-                     
-
-Whenever the State Variable updates React reRender the component. React does it very fast, in a very optimized way in less code. This is the beauty of React. Because of this React is the most popular library for building UI applications. Here what React is doing is making DOM Operations super fast and efficient. So if we click TOP RATED RESTAURANT button browser has to Rerender that component. That logic of updating this UI is known as Rerendering and this is where React is best. A lot of developers thinks that our web application is fast because we are using React, React is minifyinf our code, React is Bundling our code.. No friends React does not do anything React is only good at DOM operations This is the core logic of React. Hooks sinks our UI Layer with Data Layer. When data changes our UI updates automatically.
+MICROSERVICE ARCHITECTURE:
+Now a days the world is kind of moving towards Microservice Architecture all the big companies are preffering to make microservices. In this we have different services for all different jobs for example we have a service which is backend services we have a UI service, we have service which connects to Database, we have a service for our SMS sending these are known as Microservices and all these services combined together forms a big app means for every thing we have a different project and this is known as SEPARATION OF CONCERNS and SINGLE RESPONSIBILITY PRINCIPLE where each and every service has its own job.
+So in Monolith Architecture all the developers the backend developers, frontend developers everybody used to work in the same project everybody used to work in same github repository now with Microservice Architecture all of the teams work on their own independent services.
 
 
 
-//React says I will controll UI not you means what to update or when to update in UI I(React) will decide it. So react reacts on updation of variables. So to update data React gives us special method which is known as HOOKS. by using hooks we can sink data layer and UI layer together.
+How React application make a backend API call to fetch the data:
 
--useEffect()
+There are two approaches for how UI applications fetch the data from backend:
 
-REACT FIBRE: (RECONCILIATION ALGORITHM)
-finds the difference between two virtual doms old and new or updated and previous and then update a actual dom.
-virtual dom is a representation of actual dom.
+Number one is when our app loads one thing we can do is we can just make an API call and when we gat data we render it on the UI.
 
-Actual Dom:
-Actual Dom is tags i.e <div> <img>.. this is actual dom
+   LOAD ----> API ----> RENDER
+As soon as our page loads we make an API call, wait for data to come and then we render the UI. Suppose this API call takes 500ms so what will happen the page will wait for 500ms and after 500ms it will render the UI.
 
-Virtual Dom:
-Virtial Dom is representation of actual dom. just like react.createElement gives us an object that object is virtual dom and if we have big structure of actual DOM(tags) then react will also give us object. Means if we console.log any component then it will give object. So we can say that it is normal js object. So whatever we see in the UI React keeps the track of all the UI, all the HTML elements as a virtual dom which is kind of object representation of the dom.
-for example if we have seven card in the UI and when we click filter button our UI filtered out and give us three card only so here before click the filter btn react keeps our HTMl in an object and after clicking that filter btn new object will formed and now react finds out the difference between these two objects that first it has sevens cards now there are three cards. after finding difference it will actually update the DOM. So we can say that whenever there is a change in any state variable, React will find out the difference between the virtual Dom and it will rerender our component. So we can say that React is fast because it is doing efficient Dom manipulation.
+The second approach is as soon as the page loads we will just render our UI. After we have quickly rendered our UI now we make an API call and as soon as we get the result back from that API, we will now populate we will now rerender our application with the new data.
 
-If the Interviewer ask you why react is fast because it has virtual Dom, it has a Diff Algorithm, which is very efficient, it can do efficient Dom manipulation.
-The concept of virtual dom existed from a long time in software engineering. React took that and built its own algorithm over that virtual Dom which is known as Diff algorithm.
+  LOADS ----> RENDER ----> API ----> RERENDER
 
-in a state variable the function which we have to call work as a trigger to start the React Diff Algorithm and update the UI. So when we call that function it will automatically rerender our component.
+In react we will always be using second approach because this is better approach and gives us a better UX because in the first approach till 500ms our page is kind of frozen we dont see anything on the page and after 500ms we suddenly see everything so thats a poor UX. In the second 
+approach we load the page and render what we can, render the skeleton so when we render the page quickly we can see something and then slowly the website loads its a better user experiece and the use did not see the lot of lag and all that kind of stuff. Now we must say that we are rendering twice it does'nt matter because the most important thing about React why React is so popular is because its render cycles are very fast. React has the one of the best render mechanism, React renders our UI very fast.
+ 
+useEffect HooK:
 
-const [listOfRestaurant,setListOfRestaurant] = useState() is same as:
-const arr= useState();
-const listOfRestaurant = arr[0];
-const setListOfRestaurant =arr[1];
-both methods do same work in first we are destructuring on the fly.
+To code in second approach we have to use useEffect hook. Hooks are just a normal javaScript functions which react gives to us these has there own specific usecase where we use these functions. So just like useState is used to create state variable, useEffect is used to render the things after comonent renders.
+useEffect takes two arguments, first is callback function and the second is dependency array.
+i.e:
+              useEffect (()=>{},[])
+here callback function will be called after component renders. for example if we are using useEffect hook in Body component so when the Body component will load it will render the component and as soon as the render cycle is finished it will call this callback function which we have passed into useEffect or in easy words when the Body component will render, it will render it and as soon as the render cycle is finished, it will just quickly call this callback function so this is how this useEffect hook will work. There are three cases for dependecy array:  
 
-//Never ever keeps any hard coded string in Component file. We should keep them in constant.js file in the folder name as utils or common or config. And its a good practice to name a constants in a CAPITAL letters.
+UseEffect will be called every time our Component renders. And if put a dependency array in it, then dependency array changes the behaviour of its render. Putting a dependency array is not mandatory only callback function is mandatory in useEffect. So when we call useEffect without a dependency array, it will render every time our component render.
 
-//In one file we can only have one default export, we cannot use export default twice in one file. If we have to export multiple things from single file then we use named export.
+Different cases of Dependency Array
+
+--> if there is no dependency array that means useEffect will be called on every render. Means when we change or update something, useEffect will be called on each change and on each change React re-renders the component and on each render useEffect will be called.
+
+--> if there is empty dependency array ( [] ), if the dependency array is empty then useEffect will be called on intitial render (just once) when the component is render for the first time. Means useEffect will not be called again and again even if the component re-renders.
+
+The basic nature or the default behaviour of the useEffect is to be called after each render, but if we give it a dependency array then it will just be called once.
+
+--> if we put something inside dependency array, then it will only be called everytime when the dependency changes                              
+
+SHIMMER UI: 
+We load fake page until we get the actual data from the API. This is a good practice for example if we use loading icon instead of shimmer UI, then while loading spinner is spinning, suddenly our page loads and things appear in front of us which is very painful for eyes as suddenly somethinf unimagined pops up in front of us and this is bad user experience. So by using shimmer UI user can anticipate that okay there will be cards which will be loading over here.
+
+
+CONDITIONAL RENDERING:
+Rendering on the basis of condition is known as conditional rendering.
+ie:
+if(listOfRestaurant.length ===0){
+  return <Shimmer/>
+}
+
+
+useState Hook DETAILS:
+By using simple variable, Ract dont know whether it is updated or not thats why useState hook gives us a special variable known as STATE VARIABLE by which react knows and keep track of updation. For example if we are using useState hook in our Header component so whenever this state variable will change React will Re-render this Header component React is kind of refresh this Header component and all the updated values will be there means it triggers the reconciliation process, means calculating the difference between old state of virtual dom and new state of virtual dom and then updating the UI. Here React is rendering the whole Header component, but React is only updating the things which are changed, the other things which are not changed will remain intact without even refresh. For example if we have logo, lists and a btn in our Header component and we only changed our button using state variable what happens is React will only refresh the button after re-rendering the whole Header component.
+Whenever state variable update, react triggers a reconciliation cycle(re-render the component).
+
+One important question arises from useState Hook is that how a constant variable be changed which is against the javascript rules? i.e
+
+const [variablelist,setVariableList]=useState(simpleVariable)
+setVariableList(newVariable)
+The answer to this is whenever we update the value by using setVariableList() React is updating the variablelist and it is calling this Header component once again or rendering it once again but this time when we invoke that function, this variablelist is a new variable then it was before. This is the beauty of React. React has such amazing Reconciliation process such amazing Rendering process and it does the redering process or DOM manipulation very fast and efficiently.
+
+We have to keep in our mind that useState will always be used inside body of functional Component, and try to call this hook on the top of a component body. And never use useState hook or create local state variable in if else condition, simple functions and in for loop.
