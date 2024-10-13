@@ -6,7 +6,7 @@
 
 .header{
     display: flex;
-    justify-content: space-between;
+   justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid gray;
     border-radius: 10px;
@@ -100,4 +100,17 @@ gap: 15px;
 justify-content: center;
 gap: 15px;
 margin-top: 60px;
+}
+
+.login{
+    margin-right:16px;
+    padding: 2px;
+   font-weight: bolder;
+  cursor: pointer;
+  
+}
+
+.login:hover{
+    border: 2px solid red;
+   border-radius: 4px;
 }
