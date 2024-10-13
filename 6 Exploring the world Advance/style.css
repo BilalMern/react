@@ -83,7 +83,7 @@ gap: 15px;
    
 }
 .top_rated:hover{
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 3px;
   
 }
