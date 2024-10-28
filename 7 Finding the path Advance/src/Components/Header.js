@@ -1,5 +1,6 @@
 import { LOGO_URL } from "../utils/constant";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
   return (
@@ -11,8 +12,8 @@ const Header = () => {
         <div className="nav-items">
           <ul>
             <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
+            <li> <a href="/about">About Us (anchor tag) </a> </li>
+            <li> <Link to="/contact" className="contact"> Contact Us (Link Component) </Link> </li>
             <li>Cart</li>
             <button
               className="login"
