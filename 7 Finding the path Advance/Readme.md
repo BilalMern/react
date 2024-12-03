@@ -59,3 +59,6 @@ There are two types of routing, Client side routing and Server side routing.
 Server side routing means, if we have index.html, about.html and contact.html, if we click on our Link (anchor) tag of about page, it reload the whole page it send data call to about.html and fetches that html and render it on to the web page means it makes the network call gets the data of about.html from server and render it on the UI.
 
 Client side routing means all the Components are already loaded in our app so when we click on about Link it just load that component 
+
+
+DYNAMIC ROUTING:
