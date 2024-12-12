@@ -6,6 +6,7 @@ let resCardData = [
       rating: "4.2",
       delivery: "30 MINS",
       price: "PKR 1000 FOR TWO",
+      Id: "123"
     },
     {
       img: (src =
@@ -14,6 +15,7 @@ let resCardData = [
       rating: "4.8",
       delivery: "90 MINS",
       price: "PKR 1500 PER MATKA",
+      id: "456"
     },
     {
       img: (src =
@@ -22,6 +24,7 @@ let resCardData = [
       rating: "4.5",
       delivery: "60 MINS",
       price: "PKR 3000 FOR TWO",
+      id: "789"
     },
     {
       img: (src =
@@ -30,6 +33,7 @@ let resCardData = [
       rating: "4.0",
       delivery: "45 MINS",
       price: "PKR 1000 PER PLATE",
+      id: "101112"
     },
     {
       img: (src =
@@ -38,6 +42,7 @@ let resCardData = [
       rating: "4.9",
       delivery: "60 MINS",
       price: "PKR 3500 PER KG",
+      id: "131415"
     },
     {
       img: (src =
@@ -46,6 +51,7 @@ let resCardData = [
       rating: "4.7",
       delivery: "45 MINS",
       price: "PKR 2500 PER PLATE",
+      id: "161718"
     },
     {
       img: (src =
@@ -54,6 +60,7 @@ let resCardData = [
       rating: "4.5",
       delivery: "45 MINS",
       price: "PKR 2000 PER PLATE",
+      id: "192030"
     },
     {
       img: (src =
@@ -62,6 +69,7 @@ let resCardData = [
       rating: "4.7",
       delivery: "60 MINS",
       price: "PKR 4000 PER PLATE",
+      id: "31,32,33"
     },
     {
       img: (src =
@@ -70,6 +78,7 @@ let resCardData = [
       rating: "4.8",
       delivery: "60 MINS",
       price: "PKR 4000 PER PLATE",
+      id: "34,35,36"
     },
     {
       img: (src =
@@ -78,6 +87,7 @@ let resCardData = [
       rating: "5.0",
       delivery: "75 MINS",
       price: "PKR 10000 PER PLATE",
+      id: "373839"
     },
     {
       img: (src =
@@ -86,6 +96,7 @@ let resCardData = [
       rating: "4.3",
       delivery: "70 MINS",
       price: "PKR 3000 PER PLATE",
+      id: "404142"
     },
     {
       img: (src =
@@ -94,6 +105,7 @@ let resCardData = [
       rating: "4.0",
       delivery: "60 MINS",
       price: "PKR 2500 PER PLATE",
+      id: "434445"
     },
     {
       img: (src =
@@ -102,6 +114,7 @@ let resCardData = [
       rating: "4.0",
       delivery: "60 MINS",
       price: "PKR 2500 PER PLATE",
+      id: "464748"
     },
     {
       img: (src =
@@ -110,6 +123,7 @@ let resCardData = [
       rating: "4.4",
       delivery: "60 MINS",
       price: "PKR 3500 PER PLATE",
+      id: "495051"
     },
     {
       img: (src =
@@ -118,6 +132,7 @@ let resCardData = [
       rating: "4.2",
       delivery: "40 MINS",
       price: "PKR 1500 PER PLATE",
+      id: "525354"
     },
     {
       img: (src =
@@ -126,6 +141,7 @@ let resCardData = [
       rating: "4.5",
       delivery: "30 MINS",
       price: "PKR 1500",
+      id: "555657"
     },
     {
       img: (src =
@@ -134,6 +150,7 @@ let resCardData = [
       rating: "4.6",
       delivery: "10 MINS",
       price: "PKR 1000",
+      id: "585960"
     },
     {
       img: (src =
@@ -142,6 +159,7 @@ let resCardData = [
       rating: "4.9",
       delivery: "30 MINS",
       price: "PKR 2000",
+      id: "616263"
     },
     {
       img: (src =
@@ -150,6 +168,7 @@ let resCardData = [
       rating: "4.3",
       delivery: "30 MINS",
       price: "PKR 1000",
+      id: "646566"
     },
     {
       img: (src =
@@ -158,6 +177,7 @@ let resCardData = [
       rating: "4.6",
       delivery: "30 MINS",
       price: "PKR 3000",
+      id: "676869"
     },
   ];
 export default resCardData

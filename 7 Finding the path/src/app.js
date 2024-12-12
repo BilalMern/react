@@ -10,7 +10,6 @@ import { RouterProvider } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 
-
 let AppLayout = () => {
   return (
     <div className="app">
@@ -38,7 +37,7 @@ const appRouter = createBrowserRouter([
           element: <Contact/>
         },
         {
-          path: "/RestaurantMenu/:123",// this is the way of writing path for dynamic routes
+          path: "/restaurants/:resId",// this is the way of writing path for dynamic routes
           element: <RestaurantMenu/>
         }
     ]
